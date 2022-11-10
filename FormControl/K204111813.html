@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Form</title>
+    <style type="text/css">
+        .required {
+            color: red;
+            content: "*";
+        }
+        
+        h1 {
+            background-color: rgb(2, 2, 37);
+            color: white;
+            text-align: center;
+        }
+        
+        h3 {
+            font-style: italic;
+        }
+        
+        input[type=text] {
+            width: 200px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+        
+        label {
+            display: inline-block;
+            width: 200px;
+            font-weight: bold;
+        }
+        
+        div.label_div {
+            width: 200px;
+            float: left;
+        }
+        
+        .center_child {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        
+        .container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ĐĂNG KÝ NGƯỜI DÙNG</h1>
+    <form method="post">
+
+        <fieldset>
+            <div class="label_div">
+                <label for="name">Tên đăng nhập:</label>
+            </div>
+            <input type="text" id="name" name="name" required>
+            <br/>
+            <div class="label_div">
+                <label for="password">Mật khẩu:</label>
+            </div>
+            <input type="password" id="password" name="password" required>
+        </fieldset>
+
+
+        <fieldset>
+            <div class="label_div">
+                <Label for="repeatPass">Gõ lại mật khẩu: </Label>
+            </div>
+            <input type="password" id="repeatPass" name="repeatPass" required>
+
+            <h3>Nhập thông tin để lấy lại mật khẩu khi quên</h3>
+            <div class="label_div">
+                <label for="secretQues">Câu hỏi bí mật:</label>
+            </div>
+            <select id="secretQues" name="secretQues">
+            <option value="1">Tên trường cấp 3</option>
+            <option value="2">Tên người yêu đầu tiên</option>
+            <option value="3">Tên chó yêu thích</option>
+        </select>
+
+            <br>
+
+            <div class="label_div">
+                <label for="secretAns">Trả lời:</label>
+            </div>
+            <input type="text" id="secretAns" name="secretAns" required>
+        </fieldset>
+        <fieldset>
+            <h3>
+                Thông tin cá nhân
+            </h3>
+            <div class="label_div">
+                <label for="familyname">Họ và chữ lót:</label>
+            </div>
+            <input type="text" id="familyname" name="familyname">
+            <br/>
+            <div class="label_div">
+                <label for="firstname">Tên:</label>
+            </div>
+            <input type="text" id="firstname" name="firstname">
+            <br/>
+            <label for="DOB">Ngày sinh:</label>
+            <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+            </section>
+            <input type="month">
+            <input type="year">
+            <br>
+            <label for="Gender">Giới tính:</label>
+            <input type="radio" name="Gender" value="Nam" checked>Nam
+            <input type="radio" name="Gender" value="Nữ">Nữ
+            <br>
+            <label for="Ocupation">Nghề nghiệp:</label>
+            <select name="Ocupation">
+                <option>Học sinh</option>
+                <option>Sinh viên</option>
+                <option>Giáo viên</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <h3>Sở thích (tùy chọn)</h3>
+            <input type="checkbox" name="hobby" value="Đọc sách">Âm nhạc
+            <input type="checkbox" name="hobby" value="Nghe nhạc">Du lịch
+            <input type="checkbox" name="hobby" value="Xem phim">Nghiên cứu
+            <input type="checkbox" name="hobby" value="Đọc sách">Kinh doanh
+        </fieldset>
+        <div class="container">
+            <div class="center_child">
+                <button type="submit">Đăng ký</button>
+                <button type="reset">Xóa</button>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
