@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/ecommerce/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
+
+<body>
+    <p w3-include-html="menu.html"></p>
+
+
+    <div id="category">
+    </div>
+    <script>
+        var xhttp = new XMLHttpRequest();
+        var url = "../data/categories.json";
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var categories = JSON.parse(this.responseText);
+                formatCategories(categories);
+
+            }
+            xhttp.open("GET", url, true);
+            xhttp.send();
+
+            function formatCategories(arr) {
+                var category = "";
+                for (var i = 0; i < arr.length; i++) {
+                    category += "<p>" + arr[i].name + "</p>";
+
+                }
+                document.getElementById("category").innerHTML = category;
+            }
+        }
+    </script>
+    <script>
+        w3.includeHTML();
+    </script>
+
+
+</body>
+
+</html>

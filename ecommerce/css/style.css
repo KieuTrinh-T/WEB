@@ -1,0 +1,62 @@
+.menu {
+    width: 100%;
+    background-color: rgb(1, 1, 23);
+    overflow: auto;
+    position: fixed;
+    top: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    padding: 12px;
+}
+
+.menu a:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(1, 1, 23);
+}
+
+.info {
+    margin-top: 50px;
+    text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    .menu a {
+        float: none;
+        display: block;
+    }
+    .info,
+    .content {
+        margin-top: 200px;
+    }
+    #myChart {
+        margin-top: 200px;
+    }
+}
+
+.avatar {
+    width: 50%;
+    height: 50%;
+}
+
+.row {
+    flex-wrap: wrap;
+    /* for horizontal aligning of child divs */
+    justify-content: center;
+    /* for vertical aligning */
+    align-items: center;
+}
+
+.column {
+    height: 200px;
+    width: 24%;
+    padding: 10px;
+    display: inline-block;
+}
+
+.column h3 {
+    text-align: center;
+}
