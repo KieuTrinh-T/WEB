@@ -13,12 +13,18 @@
 <body>
 
     <div class="menu">
-        <a href="/ecommerce/src/index.html"> <i class="	fa fa-home"></i> Home</a>
-        <a href="/ecommerce/src/product.html"><i class="fa fa-cart-plus"></i> Product</a>
-        <a href="/ecommerce/src/dashboard.html"><i class="fa fa-dashboard"></i> Dashboard</a>
-        <a href="/ecommerce/src/contact.html"><i class="fa fa-volume-control-phone"></i> Contact</a>
+        <a href="index.html"> <i class="	fa fa-home"></i> Home</a>
+        <a href="product.html"><i class="fa fa-cart-plus"></i> Product</a>
+        <a href="dashboard.html"><i class="fa fa-dashboard"></i> Dashboard</a>
+        <a href="contact.html"><i class="fa fa-volume-control-phone"></i> Contact</a>
+        <p id="username"></p>
     </div>
 
+    <script>
+        function setUserName(name) {
+            document.getElementById("username").innerHTML = username;
+        }
+    </script>
 </body>
 
 </html>

@@ -6,6 +6,13 @@
     <link rel="stylesheet" href="/ecommerce/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script>
+        var username = localStorage.getItem("username");
+        var password = localStorage.getItem("password");
+        if (username === null || password === null) {
+            window.location.href = "login.html";
+        }
+    </script>
 </head>
 
 <body>
@@ -15,12 +22,24 @@
         w3.includeHTML();
     </script>
     <div class="info">
-        <img class="avatar" src="/ecommerce/images//matbam.jpg" alt="ecommerce">
+        <img class="avatar" src="https://i.pinimg.com/originals/04/62/f2/0462f2e8503fa676e0cce204aa5a1a3c.gif" alt="ecommerce" style="width: 30%">
         <div class="name">
             <p>Trần Thị Kiều Trinh</p>
             <p>K204111813</p>
         </div>
+        <script>
+            var username = sessionStorage.getItem("username");
+            document.getElementById("username").innerHTML = username;
+        </script>
+    </div>
+    <button class="button" onclick="window.location.href = 'login.html'; logout()">Logout</button>
 
+    <script>
+        function logout() {
+            localStorage.removeItem("username");
+            localStorage.removeItem("password");
+        }
+    </script>
 </body>
 
 </html>

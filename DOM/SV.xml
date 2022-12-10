@@ -1,0 +1,19 @@
+<root>
+
+<SinhVien>
+    <MSSV>123456</MSSV>
+    <HoTen>Nguyen Van A</HoTen>
+    <NgaySinh>01/01/1990</NgaySinh>
+    <GioiTinh>Nam</GioiTinh>
+</SinhVien>
+<GiangVien>
+    <MaGV>123456</MaGV>
+    <HoTen>
+    <Ho>Nguyen</Ho>
+    <TenDem>Thi</TenDem>
+    <Ten>A</Ten>
+    </HoTen>
+    <NgaySinh>01/01/1990</NgaySinh>
+    <GioiTinh>Nam</GioiTinh>
+</GiangVien>
+</root>

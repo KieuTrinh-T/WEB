@@ -45,6 +45,13 @@
         }
     </style>
     <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script>
+        var username = localStorage.getItem("username");
+        var password = localStorage.getItem("password");
+        if (username === null || password === null) {
+            window.location.href = "login.html";
+        }
+    </script>
 </head>
 
 <body>

@@ -11,6 +11,13 @@
             float: left;
         }
     </style>
+    <script>
+        var username = localStorage.getItem("username");
+        var password = localStorage.getItem("password");
+        if (username === null || password === null) {
+            window.location.href = "login.html";
+        }
+    </script>
 </head>
 
 
